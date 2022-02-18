@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TheHeader from './components/TheHeader.vue'
+</script>
 
 <template>
-  <div class="text-3xl font-bold underline">Hello from vite</div>
+  <TheHeader />
 </template>
 
 <style>

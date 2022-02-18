@@ -1,0 +1,44 @@
+.text__header-1 {
+  font-family: var(--font-header);
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: var(--color-text);
+}
+
+.text__header-2 {
+  font-family: var(--font-header);
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.4rem;
+  color: var(--color-text);
+}
+
+.text__content {
+  font-family: var(--font-content);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--color-text);
+}
+
+.text__content-small {
+  font-family: var(--font-content);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--color-text);
+}
+
+.text__content-smaller {
+  font-family: var(--font-content);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1.15rem;
+  color: var(--color-text);
+}
