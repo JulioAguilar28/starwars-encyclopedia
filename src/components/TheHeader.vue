@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <header class="text__content">Hello</header>
+  <header>
+    <h2 class="text__header-1">User</h2>
+  </header>
 </template>
 
 <style></style>

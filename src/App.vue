@@ -3,7 +3,11 @@ import TheHeader from './components/TheHeader.vue'
 </script>
 
 <template>
-  <TheHeader />
+  <div id="app">
+    <div class="app-container">
+      <TheHeader />
+    </div>
+  </div>
 </template>
 
 <style>
