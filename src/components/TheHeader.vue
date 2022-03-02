@@ -2,7 +2,7 @@
 
 <template>
   <header>
-    <h2 class="text__header-1">User</h2>
+    <h2 class="text__header-1">StarWars Api</h2>
   </header>
 </template>
 

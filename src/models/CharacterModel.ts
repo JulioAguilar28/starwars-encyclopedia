@@ -2,8 +2,8 @@ export interface Character {
   name: string
   birthYear: string
   gender: string
-  specie?: Specie
-  homeworld?: Planet
+  specie: Specie
+  planet: Planet
 }
 
 export interface Specie {
