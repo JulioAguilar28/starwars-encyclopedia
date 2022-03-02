@@ -1,4 +1,4 @@
-import charactersPageVue from '@/pages/charactersPage.vue'
+import charactersPageVue from '@/pages/CharactersPage.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
