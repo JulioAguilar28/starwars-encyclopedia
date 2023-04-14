@@ -1,20 +1,41 @@
 <script setup lang="ts">
-import { reactive, onMounted } from 'vue'
+import { reactive, onMounted, defineProps, withDefaults, watch } from 'vue'
 import { getCharacters } from '@/services/CharacterService'
 import CharacterCardView from './CharacterCardView.vue'
 import type { Character } from '@/models/CharacterModel'
+
+interface CharacterListProps {
+  search?: string
+}
 
 interface CharactersListState {
   characters?: Array<Character>
 }
 
+const props = withDefaults(defineProps<CharacterListProps>(), {
+  search: ''
+})
+
 const state: CharactersListState = reactive({
   characters: []
 })
 
+const getCharactersHandler = async (search?: string) => {
+  const request = search ? getCharacters(search) : getCharacters()
+  state.characters = await request
+}
+
 onMounted(async () => {
-  state.characters = await getCharacters()
+  getCharactersHandler()
 })
+
+watch(
+  () => props.search,
+  (search) => {
+    if (search.length > 1) getCharactersHandler(search)
+    else getCharactersHandler()
+  }
+)
 </script>
 
 <template>

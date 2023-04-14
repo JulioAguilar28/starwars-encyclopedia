@@ -6,8 +6,9 @@ import { parseCharacter } from '@/models/ApiParsers'
 import { getIdFromUrl } from '@/utils/CharactersUtils'
 import { getPlanetById } from './PlanetService'
 
-export const getCharacters = async (): Promise<Character[]> => {
-  const response: AxiosResponse = await getCharactersRequest()
+export const getCharacters = async (search?: string): Promise<Character[]> => {
+  const request = search ? getCharactersBySearchRequest(search) : getCharactersRequest()
+  const response: AxiosResponse = await request
 
   // This will wait for all promises then collect the results in an Array
   return await Promise.all(
@@ -28,3 +29,6 @@ export const getCharacters = async (): Promise<Character[]> => {
 const getCharactersRequest = (): Promise<AxiosResponse> => {
   return SWApiPeopleService.of().get('')
 }
+
+const getCharactersBySearchRequest = (search: string): Promise<AxiosResponse> =>
+  SWApiPeopleService.of().get(`?search=${search}`)
